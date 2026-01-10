@@ -1,17 +1,40 @@
+// References to HTML elements
 const input = document.querySelector('#favchap');
 const button = document.querySelector('button');
 const list = document.querySelector('#list');
 
-const li = document.createElement('li');
+// Add Chapter button click event
+button.addEventListener('click', function () {
 
-const deleteButton = document.createElement('button');
+    // Check that input is not empty
+    if (input.value.trim() !== '') {
 
-li.textContent = input.value;
+        // Create list item
+        const li = document.createElement('li');
+        li.textContent = input.value;
 
-deleteButton.textContent = '❌';
+        // Create delete button
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = '❌';
+        deleteButton.setAttribute(
+            'aria-label',
+            `Remove ${input.value}`
+        );
 
-deleteButton.setAttribute('aria-label', 'Remove chapter');
+        // Add delete functionality
+        deleteButton.addEventListener('click', function () {
+            list.removeChild(li);
+            input.focus();
+        });
 
-li.append(deleteButton);
+        // Append button and list item
+        li.append(deleteButton);
+        list.append(li);
 
-list.append(li);
+        // Clear input
+        input.value = '';
+    }
+
+    // Always return focus to input
+    input.focus();
+});
