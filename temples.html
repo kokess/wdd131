@@ -4,18 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <meta name="description"
-        content="WDD 131 – Dynamic Web Fundamentals | Austine Dominic Essien | HTML, CSS, JavaScript fundamentals">
+        content="WDD 131 – Dynamic Web Fundamentals | Austine Dominic Essien | Temple Picture Album">
     <meta name="author" content="Austine Dominic Essien">
+
     <title>Temple Album</title>
 
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
+    <!-- CSS -->
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
 
+    <!-- JavaScript -->
     <script src="scripts/temples.js" defer></script>
 </head>
 
@@ -23,7 +28,7 @@
 
     <header>
         <h1>Temple Album</h1>
-        <button id="hamburger">&#9776;</button>
+        <button id="hamburger" aria-label="Menu">&#9776;</button>
         <nav id="nav-menu">
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -35,25 +40,62 @@
         </nav>
     </header>
 
-    
     <main>
         <h2>Explore the Temples</h2>
+
         <div class="gallery">
-            
             <figure>
-                <img src="images/Nauvoo-Temple.jpg" alt="Temple Name 1">
-                <figcaption>Temple Name 1</figcaption>
-            </figure>
-            <figure>
-                <img src="images/temple2.jpg" alt="Temple Name 2">
-                <figcaption>Temple Name 2</figcaption>
+                <img src="images/nauvoo-temple.jpg" alt="Nauvoo Illinois Temple">
+                <figcaption>Nauvoo Illinois Temple</figcaption>
             </figure>
 
+            <figure>
+                <img src="images/temple2.jpg" alt="Salt Lake Temple">
+                <figcaption>Salt Lake Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple3.jpg" alt="Rome Italy Temple">
+                <figcaption>Rome Italy Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple4.jpg" alt="Paris France Temple">
+                <figcaption>Paris France Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple5.jpg" alt="Accra Ghana Temple">
+                <figcaption>Accra Ghana Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple6.jpg" alt="Tokyo Japan Temple">
+                <figcaption>Tokyo Japan Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple7.jpg" alt="Laie Hawaii Temple">
+                <figcaption>Laie Hawaii Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple8.jpg" alt="London England Temple">
+                <figcaption>London England Temple</figcaption>
+            </figure>
+
+            <figure>
+                <img src="images/temple9.jpg" alt="Johannesburg South Africa Temple">
+                <figcaption>Johannesburg South Africa Temple</figcaption>
+            </figure>
         </div>
     </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> Austine Dominic Essien | Last modified: <span id="lastModified"></span></p>
+        <p>
+            &copy; <span id="year"></span> Austine Dominic Essien |
+            Last modified: <span id="lastModified"></span>
+        </p>
     </footer>
 
 </body>
