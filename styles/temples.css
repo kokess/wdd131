@@ -28,10 +28,13 @@ header h1 {
 }
 
 nav {
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 0.5rem;
     margin-top: 0.5rem;
+
+    max-height: 0;
+    overflow: hidden;
 }
 
 nav a {
