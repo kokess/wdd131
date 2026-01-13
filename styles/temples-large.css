@@ -1,15 +1,17 @@
-@media screen and (min-width: 32rem) {
-    nav {
+@media (min-width: 768px) {
+    nav ul {
         display: flex;
+        /* horizontal nav on larger screens */
         flex-direction: row;
-        gap: 1rem;
     }
 
     #hamburger {
         display: none;
+        /* hide hamburger on large screens */
     }
 
-    main.container {
-        grid-template-columns: repeat(3, 1fr);
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /* multiple columns */
     }
 }
