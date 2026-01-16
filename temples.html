@@ -24,68 +24,83 @@
 <body>
 
     <header>
-        <h1>Temple Album</h1>
-        <button id="hamburger" aria-label="Menu">&#9776;</button>
-        <nav id="nav-menu">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Old</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Large</a></li>
-                <li><a href="#">Small</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <h1>Temple Album</h1>
+
+            <button id="hamburger" aria-label="Toggle navigation menu" aria-controls="nav-menu" aria-expanded="false">
+                &#9776;
+            </button>
+
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#">Old</a></li>
+                    <li><a href="#">New</a></li>
+                    <li><a href="#">Large</a></li>
+                    <li><a href="#">Small</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
-        <h2>Explore the Temples</h2>
+        <section class="intro">
+            <h2>Explore the Temples</h2>
+        </section>
 
-        <div class="gallery">
+        <section class="gallery">
             <figure>
-                <img src="images/nauvoo_temple.jpg" alt="Nauvoo Illinois Temple">
+                <img src="images/nauvoo_temple.jpg" alt="Nauvoo Illinois Temple" loading="lazy" width="600"
+                    height="400">
                 <figcaption>Nauvoo Illinois Temple</figcaption>
             </figure>
 
             <figure>
-                <img src="images/salt_lake_city_temple.webp" alt="Salt Lake Temple">
+                <img src="images/salt_lake_city_temple.webp" alt="Salt Lake Temple" loading="lazy" width="600"
+                    height="400">
                 <figcaption>Salt Lake Temple</figcaption>
             </figure>
 
             <figure>
-                <img src="images/rome-italy-temple.jpg" alt="Rome Italy Temple">
+                <img src="images/rome-italy-temple.jpg" alt="Rome Italy Temple" loading="lazy" width="600" height="400">
                 <figcaption>Rome Italy Temple</figcaption>
             </figure>
 
             <figure>
-                <img src="images/paris-temple.jpg" alt="Paris France Temple">
+                <img src="images/paris-temple.jpg" alt="Paris France Temple" loading="lazy" width="600" height="400">
                 <figcaption>Paris France Temple</figcaption>
             </figure>
 
             <figure>
-                <img src="images/accra-ghana-temple.jpg" alt="Accra Ghana Temple">
+                <img src="images/accra-ghana-temple.jpg" alt="Accra Ghana Temple" loading="lazy" width="600"
+                    height="400">
                 <figcaption>Accra Ghana Temple</figcaption>
             </figure>
 
             <figure>
-                <img src="images/uyo_nigeria_temple.jpg" alt="Uyo Nigeria Temple">
+                <img src="images/uyo_nigeria_temple.jpg" alt="Uyo Nigeria Temple" loading="lazy" width="600"
+                    height="400">
                 <figcaption>Uyo Nigeria Temple</figcaption>
             </figure>
 
             <figure>
-                <img src="images/laie_hawaii_temple_lds.webp" alt="Laie Hawaii Temple">
+                <img src="images/laie_hawaii_temple_lds.webp" alt="Laie Hawaii Temple" loading="lazy" width="600"
+                    height="400">
                 <figcaption>Laie Hawaii Temple</figcaption>
             </figure>
 
             <figure>
-                <img src="images/london-england-temple.jpg" alt="London England Temple">
+                <img src="images/london-england-temple.jpg" alt="London England Temple" loading="lazy" width="600"
+                    height="400">
                 <figcaption>London England Temple</figcaption>
             </figure>
 
             <figure>
-                <img src="images/johannesburg-temple.webp" alt="Johannesburg South Africa Temple">
+                <img src="images/johannesburg-temple.webp" alt="Johannesburg South Africa Temple" loading="lazy"
+                    width="600" height="400">
                 <figcaption>Johannesburg South Africa Temple</figcaption>
             </figure>
-        </div>
+        </section>
     </main>
 
     <footer>
