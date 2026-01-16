@@ -1,17 +1,28 @@
 @media (min-width: 768px) {
+
+    nav {
+        max-height: none;
+        overflow: visible;
+    }
+
     nav ul {
         display: flex;
-        /* horizontal nav on larger screens */
         flex-direction: row;
+        gap: 1rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
     }
 
     #hamburger {
         display: none;
-        /* hide hamburger on large screens */
     }
 
     .gallery {
+        display: grid;
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        /* multiple columns */
+        gap: 1rem;
+    }
+}
     }
 }
