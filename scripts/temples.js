@@ -1,15 +1,14 @@
-document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('lastmod').textContent = document.lastModified;
+const yearSpan = document.querySelector("#year");
+const lastModifiedSpan = document.querySelector("#lastModified");
 
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.getElementById('nav-menu');
+yearSpan.textContent = new Date().getFullYear();
+lastModifiedSpan.textContent = document.lastModified;
 
-hamburger.addEventListener('click', () => {
-    navMenu.classList.toggle('open');
-});
+const hamburger = document.querySelector("#hamburger");
+const navMenu = document.querySelector("#nav-menu");
 
-navMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-        navMenu.classList.remove('open');
-    });
+hamburger.addEventListener("click", () => {
+    const isOpen = navMenu.classList.toggle("open");
+
+    hamburger.setAttribute("aria-expanded", isOpen);
 });
