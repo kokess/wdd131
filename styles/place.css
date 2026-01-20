@@ -1,39 +1,172 @@
+/* CSS Variables - Madagascar Flag Colors */
 :root {
-    --main-color: #f0c040;
-    --secondary-color: #204080;
-    --font-family: 'Arial', sans-serif;
+    --primary-red: #FC3D32;
+    --primary-green: #007E3A;
+    --primary-white: #FFFFFF;
+    --text-dark: #333333;
+    --background-light: #F5F5F5;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: var(--font-family);
-    margin: 0;
-    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
 }
 
+/* Header Styles */
 header {
+    background-color: var(--primary-red);
+    color: var(--primary-white);
     text-align: center;
-    background-color: var(--main-color);
+    padding: 2rem 1rem;
+    border-bottom: 5px solid var(--primary-green);
 }
 
-h1,
-h2 {
-    margin: 0.5em 0;
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
 }
 
+/* Main Content */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Hero Image */
+.hero {
+    display: block;
+    width: 100%;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Mobile View - Default Styles */
+.data-section,
+.weather-section {
+    padding: 2rem 1.5rem;
+    margin: 1rem;
+    background-color: var(--primary-white);
+}
+
+.data-section {
+    background-color: var(--background-light);
+}
+
+.data-section h2 {
+    background-color: var(--primary-green);
+    color: var(--primary-white);
+    padding: 1rem;
+    margin: -2rem -1.5rem 1.5rem -1.5rem;
+    font-size: 1.8rem;
+}
+
+.weather-section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+/* Weather icon in mobile view (SVG) */
+.weather-icon-mobile {
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin: 1.5rem auto;
+}
+
+/* Hide pseudo-element in mobile */
+.weather-section h2::after {
+    content: none;
+}
+
+/* Definition Lists */
+dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.5rem 1rem;
+}
+
+dt {
+    font-weight: 700;
+    text-align: right;
+}
+
+dd {
+    text-align: left;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-red);
+    color: var(--primary-white);
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+/* Larger Screen Styles - Media Query */
 @media (min-width: 600px) {
-    header {
-        padding: 2em;
+    header h1 {
+        font-size: 3rem;
     }
-}
 
-@media (min-width: 1024px) {
     main {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 1.5rem;
+        padding: 2rem;
+        position: relative;
     }
 
-    .wide-view-icon::after {
-        content: ' ⛅';
+    .hero {
+        grid-column: 1 / -1;
+        grid-row: 1;
+    }
+
+    .data-section {
+        grid-column: 1;
+        grid-row: 2;
+        margin: 0;
+    }
+
+    .weather-section {
+        grid-column: 2;
+        grid-row: 2;
+        margin: 0;
+        align-self: start;
+    }
+
+    .weather-section h2 {
+        background-color: var(--primary-green);
+        color: var(--primary-white);
+        padding: 1rem;
+        margin: -2rem -1.5rem 1.5rem -1.5rem;
+    }
+
+    /* Pseudo-element for weather icon in larger view */
+    .weather-section h2::after {
+        content: '⛅';
+        margin-left: 1rem;
+        font-size: 1.5rem;
+    }
+
+    /* Hide mobile SVG icon in larger view */
+    .weather-icon-mobile {
+        display: none;
     }
 }
