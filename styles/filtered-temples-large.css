@@ -1,0 +1,38 @@
+@media (min-width: 768px) {
+    .header-container {
+        justify-content: space-between;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    nav {
+        width: auto;
+        max-height: none;
+        overflow: visible;
+    }
+
+    nav ul {
+        flex-direction: row;
+        margin: 0;
+        gap: 1.5rem;
+    }
+
+    nav a {
+        padding: 0.5rem 1rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+
+    .intro h2 {
+        font-size: 2.5rem;
+    }
+}
