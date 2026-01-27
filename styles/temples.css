@@ -31,8 +31,8 @@ header h1 {
 
 #hamburger {
     font-size: 1.75rem;
-    background: none;
-    border: none;
+    background-color: transparent;
+    border: 0;
     color: #ffffff;
     cursor: pointer;
 }
@@ -49,7 +49,7 @@ nav.open {
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
     margin: 0.75rem 0 0;
     display: flex;
@@ -99,13 +99,13 @@ figure {
     padding: 0;
     margin: 0;
     text-align: center;
-    box-shadow: 0 2px 8px #00000019;
+    box-shadow: 0 2px 8px #d0d0d0;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 figure:hover {
     transform: translateY(-4px);
-    box-shadow: 0 4px 12px #00000026;
+    box-shadow: 0 4px 12px #b0b0b0;
 }
 
 figure img {
