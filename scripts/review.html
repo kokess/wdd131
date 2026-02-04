@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product Review Confirmation - Thank you for your review">
+    <meta name="author" content="Austine Dominic Essien">
+    <title>Review Confirmation</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/review.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Review Submitted!</h1>
+        <p>Thank you for your feedback</p>
+    </header>
+
+    <main class="confirmation-page">
+        <div class="confirmation-message">
+            <div class="success-icon">✓</div>
+            <h2>Your review has been successfully submitted</h2>
+            <p>We appreciate you taking the time to share your experience with our products.</p>
+        </div>
+
+        <div class="review-summary">
+            <h3>Review Summary</h3>
+            <div id="reviewDetails">
+                <!-- Review details will be populated by JavaScript -->
+            </div>
+        </div>
+
+        <div class="review-counter">
+            <p>Total reviews you've submitted: <strong id="reviewCount">0</strong></p>
+        </div>
+
+        <div class="action-buttons">
+            <a href="form.html" class="btn btn-primary">Submit Another Review</a>
+            <a href="index.html" class="btn btn-secondary">Return to Home</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>
+            &copy; <span id="year"></span> Product Review Form | Austine Dominic Essien |
+            Last modified: <span id="lastModified"></span>
+        </p>
+    </footer>
+
+</body>
+
+</html>
