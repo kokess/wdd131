@@ -4,152 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Product Review Form - Submit your product reviews and ratings">
+    <meta name="description" content="WDD 131 Product Review Form">
     <meta name="author" content="Austine Dominic Essien">
-    <title>Product Review Form</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Product Review</title>
 
     <link rel="stylesheet" href="styles/form.css">
-    <script src="scripts/form.js" defer></script>
+    <script src="scripts/products.js" defer></script>
 </head>
 
 <body>
-
     <header>
-        <h1>Product Review Form</h1>
-        <p>Share your experience with our products</p>
+        <h1>Product Review</h1>
     </header>
 
     <main>
-        <form id="reviewForm" action="review.html" method="get">
+        <form method="get" action="review.html">
 
+            <!-- Product Name -->
+            <label for="product">Product Name <span class="required">*</span></label>
+            <select id="product" name="product" required>
+                <option value="" disabled selected>Select a Product ...</option>
+            </select>
+
+            <!-- Rating -->
             <fieldset>
-                <legend>Product Information</legend>
+                <legend>Overall Rating <span class="required">*</span></legend>
 
-                <!-- Product Name (Required) -->
-                <div class="form-group">
-                    <label for="productName">Product Name <span class="required">*</span></label>
-                    <select id="productName" name="productName" required>
-                        <option value="" disabled selected>Select a Product ...</option>
-                        <!-- Options will be populated dynamically via JavaScript -->
-                    </select>
-                </div>
-
-                <!-- Overall Rating (Required) -->
-                <div class="form-group">
-                    <label>Overall Rating <span class="required">*</span></label>
-                    <div class="rating-group">
-                        <input type="radio" id="rating1" name="rating" value="1" required>
-                        <label for="rating1" class="rating-label">
-                            <span class="star">☆</span>
-                            <span class="rating-text">1 - Poor</span>
-                        </label>
-
-                        <input type="radio" id="rating2" name="rating" value="2" required>
-                        <label for="rating2" class="rating-label">
-                            <span class="star">☆☆</span>
-                            <span class="rating-text">2 - Fair</span>
-                        </label>
-
-                        <input type="radio" id="rating3" name="rating" value="3" required>
-                        <label for="rating3" class="rating-label">
-                            <span class="star">☆☆☆</span>
-                            <span class="rating-text">3 - Good</span>
-                        </label>
-
-                        <input type="radio" id="rating4" name="rating" value="4" required>
-                        <label for="rating4" class="rating-label">
-                            <span class="star">☆☆☆☆</span>
-                            <span class="rating-text">4 - Very Good</span>
-                        </label>
-
-                        <input type="radio" id="rating5" name="rating" value="5" required>
-                        <label for="rating5" class="rating-label">
-                            <span class="star">☆☆☆☆☆</span>
-                            <span class="rating-text">5 - Excellent</span>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Date of Installation (Required) -->
-                <div class="form-group">
-                    <label for="installDate">Date of Installation <span class="required">*</span></label>
-                    <input type="date" id="installDate" name="installDate" required>
-                </div>
+                <label><input type="radio" name="rating" value="1" required> ☆</label>
+                <label><input type="radio" name="rating" value="2"> ☆☆</label>
+                <label><input type="radio" name="rating" value="3"> ☆☆☆</label>
+                <label><input type="radio" name="rating" value="4"> ☆☆☆☆</label>
+                <label><input type="radio" name="rating" value="5"> ☆☆☆☆☆</label>
             </fieldset>
 
-            <fieldset>
-                <legend>Product Features</legend>
+            <!-- Date -->
+            <label for="installDate">Date of Installation <span class="required">*</span></label>
+            <input type="date" id="installDate" name="installDate" required>
 
-                <!-- Useful Features (Optional) -->
-                <div class="form-group">
-                    <label>Useful Features (Check all that apply)</label>
-                    <div class="checkbox-group">
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="feature1" name="features" value="Easy to Use">
-                            <label for="feature1">Easy to Use</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="feature2" name="features" value="Good Value">
-                            <label for="feature2">Good Value</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="feature3" name="features" value="Durable">
-                            <label for="feature3">Durable</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="feature4" name="features" value="Energy Efficient">
-                            <label for="feature4">Energy Efficient</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="feature5" name="features" value="Good Design">
-                            <label for="feature5">Good Design</label>
-                        </div>
-                        <div class="checkbox-item">
-                            <input type="checkbox" id="feature6" name="features" value="Reliable">
-                            <label for="feature6">Reliable</label>
-                        </div>
-                    </div>
-                </div>
+            <!-- Features -->
+            <fieldset>
+                <legend>Useful Features</legend>
+                <label><input type="checkbox" name="features" value="durable"> Durable</label>
+                <label><input type="checkbox" name="features" value="easy"> Easy to Use</label>
+                <label><input type="checkbox" name="features" value="energy"> Energy Efficient</label>
             </fieldset>
 
-            <fieldset>
-                <legend>Your Review</legend>
+            <!-- Review -->
+            <label for="review">Written Review</label>
+            <textarea id="review" name="review"></textarea>
 
-                <!-- Written Review (Optional) -->
-                <div class="form-group">
-                    <label for="writtenReview">Written Review</label>
-                    <textarea id="writtenReview" name="writtenReview" rows="6"
-                        placeholder="Share your detailed experience with this product..."></textarea>
-                </div>
+            <!-- Name -->
+            <label for="username">Your Name</label>
+            <input type="text" id="username" name="username">
 
-                <!-- User Name (Optional) -->
-                <div class="form-group">
-                    <label for="userName">Your Name</label>
-                    <input type="text" id="userName" name="userName" placeholder="Enter your name (optional)">
-                </div>
-            </fieldset>
-
-            <!-- Submit Button -->
-            <div class="form-actions">
-                <input type="submit" value="Submit Product Review">
-            </div>
-
-            <p class="required-note"><span class="required">*</span> Required field</p>
+            <input type="submit" value="Submit Review">
 
         </form>
     </main>
 
     <footer>
-        <p>
-            &copy; <span id="year"></span> Product Review Form | Austine Dominic Essien |
-            Last modified: <span id="lastModified"></span>
-        </p>
+        <p>&copy; <span id="year"></span> Austine Dominic Essien</p>
     </footer>
 
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 
 </html>
