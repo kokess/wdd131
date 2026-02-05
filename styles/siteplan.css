@@ -1,0 +1,40 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #1B5E20;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #1B5E20;
+}
+
+section {
+    background-color: white;
+    margin: 20px;
+    padding: 15px;
+    border-left: 6px solid #FFD700;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #1B5E20;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+pre {
+    background-color: #eee;
+    padding: 10px;
+    overflow-x: auto;
+}
