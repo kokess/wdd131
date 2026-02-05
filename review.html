@@ -5,15 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Review Submitted</title>
+
     <script src="scripts/review.js" defer></script>
 </head>
 
 <body>
+
+    <header>
+        <h1>Review Submitted</h1>
+    </header>
+
     <main>
-        <h1>Thank You!</h1>
-        <p>Your review has been submitted.</p>
-        <p>Total Reviews Submitted: <span id="count"></span></p>
+        <p>Thank you for your review!</p>
+
+        <p>Total Reviews Submitted:
+            <strong><span id="count"></span></strong>
+        </p>
     </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Austine Dominic Essien</p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
 </body>
 
 </html>
